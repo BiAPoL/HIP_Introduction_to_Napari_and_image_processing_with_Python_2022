@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Batch Segmentation Workflow &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
+    <title>3.8. Batch Segmentation Workflow &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Image Processing" href="../04_Image_Processing/readme.html" />
+    <link rel="prev" title="3.6. My Segmentation Workflow" href="02_my_segmentation_workflow.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_Introduction_BIA/readme.html">
    1. Introduction to Napari for image analysis
@@ -161,10 +163,32 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="readme.html">
    3. Using Jupyter Notebooks and Napari
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_Napari_from_Jupyter_introduction.html">
+     3.1. Using Napari to visualize and interact with images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_my_segmentation_workflow.html">
+     3.6. My Segmentation Workflow
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.8. Batch Segmentation Workflow
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_Image_Processing/readme.html">
@@ -175,8 +199,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../07_Image_segmentation/readme.html">
    5. Image segmentation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -212,8 +236,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../08_Feature_extraction/readme.html">
    6. Feature extraction
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -234,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../08_Pandas/readme.html">
    7. Working with tabular data
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -448,22 +472,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Batch Segmentation Workflow
+   3.8. Batch Segmentation Workflow
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#run-function-on-example-image">
-   Run function on example image
+   3.9. Run function on example image
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#batch-processing">
-   Batch processing
+   3.10. Batch processing
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise">
-   Exercise
+   3.11. Exercise
   </a>
  </li>
 </ul>
@@ -487,22 +511,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Batch Segmentation Workflow
+   3.8. Batch Segmentation Workflow
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#run-function-on-example-image">
-   Run function on example image
+   3.9. Run function on example image
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#batch-processing">
-   Batch processing
+   3.10. Batch processing
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise">
-   Exercise
+   3.11. Exercise
   </a>
  </li>
 </ul>
@@ -516,7 +540,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="batch-segmentation-workflow">
-<h1>Batch Segmentation Workflow<a class="headerlink" href="#batch-segmentation-workflow" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.8. </span>Batch Segmentation Workflow<a class="headerlink" href="#batch-segmentation-workflow" title="Permalink to this headline">#</a></h1>
 <p>This notebook does batch processing for 3D nuclei image segmentation</p>
 <p>Import packages:</p>
 <div class="cell docutils container">
@@ -569,7 +593,7 @@ title="Print to PDF"
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="run-function-on-example-image">
-<h1>Run function on example image<a class="headerlink" href="#run-function-on-example-image" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.9. </span>Run function on example image<a class="headerlink" href="#run-function-on-example-image" title="Permalink to this headline">#</a></h1>
 <p>To test the function, we first get the path to an image by joining the folder_path (<code class="docutils literal notranslate"><span class="pre">data_path</span></code>) to the file name (<code class="docutils literal notranslate"><span class="pre">nuclei.tif</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -639,7 +663,7 @@ WARNING:vispy:QWindowsWindow::setGeometry: Unable to set geometry 1706x1088-1866
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="batch-processing">
-<h1>Batch processing<a class="headerlink" href="#batch-processing" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.10. </span>Batch processing<a class="headerlink" href="#batch-processing" title="Permalink to this headline">#</a></h1>
 <p>Now, a common next step would be to apply the same workflow to a folder of similar images in one shot, i.e., do batch processing.</p>
 <p>Because the workflow is already placed inside a function, we can do that with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loops and <code class="docutils literal notranslate"><span class="pre">if</span></code> statements.</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">os.listdir</span></code> displays all file and folder names inside a path.</p>
@@ -675,7 +699,7 @@ WARNING:vispy:QWindowsWindow::setGeometry: Unable to set geometry 1706x1088-1866
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.11. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h1>
 <p>Modify the function to also save each labeled image to disk with the same name as the original image + ‘_labels’.</p>
 </section>
 
@@ -706,6 +730,20 @@ WARNING:vispy:QWindowsWindow::setGeometry: Unable to set geometry 1706x1088-1866
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02_my_segmentation_workflow.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3.6. </span>My Segmentation Workflow</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../04_Image_Processing/readme.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Image Processing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

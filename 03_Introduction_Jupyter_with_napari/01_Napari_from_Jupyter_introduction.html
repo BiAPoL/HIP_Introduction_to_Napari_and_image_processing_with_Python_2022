@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Using Napari to visualize and interact with images &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
+    <title>3.1. Using Napari to visualize and interact with images &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.6. My Segmentation Workflow" href="02_my_segmentation_workflow.html" />
+    <link rel="prev" title="3. Using Jupyter Notebooks and Napari" href="readme.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_Introduction_BIA/readme.html">
    1. Introduction to Napari for image analysis
@@ -161,10 +163,32 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="readme.html">
    3. Using Jupyter Notebooks and Napari
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.1. Using Napari to visualize and interact with images
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_my_segmentation_workflow.html">
+     3.6. My Segmentation Workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_batch_segmentation_workflow.html">
+     3.8. Batch Segmentation Workflow
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../04_Image_Processing/readme.html">
@@ -175,8 +199,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../07_Image_segmentation/readme.html">
    5. Image segmentation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -212,8 +236,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../08_Feature_extraction/readme.html">
    6. Feature extraction
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -234,8 +258,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../08_Pandas/readme.html">
    7. Working with tabular data
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -448,27 +472,27 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Using Napari to visualize and interact with images
+   3.1. Using Napari to visualize and interact with images
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#opening-the-napari-viewer">
-   Opening the napari Viewer
+   3.2. Opening the napari Viewer
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#opening-images-in-napari-from-a-notebook">
-   Opening images in napari from a notebook
+   3.3. Opening images in napari from a notebook
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interacting-with-the-image">
-   Interacting with the image
+   3.4. Interacting with the image
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-1">
-   Exercise 1
+   3.5. Exercise 1
   </a>
  </li>
 </ul>
@@ -492,27 +516,27 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Using Napari to visualize and interact with images
+   3.1. Using Napari to visualize and interact with images
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#opening-the-napari-viewer">
-   Opening the napari Viewer
+   3.2. Opening the napari Viewer
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#opening-images-in-napari-from-a-notebook">
-   Opening images in napari from a notebook
+   3.3. Opening images in napari from a notebook
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interacting-with-the-image">
-   Interacting with the image
+   3.4. Interacting with the image
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-1">
-   Exercise 1
+   3.5. Exercise 1
   </a>
  </li>
 </ul>
@@ -526,13 +550,13 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="using-napari-to-visualize-and-interact-with-images">
-<h1>Using Napari to visualize and interact with images<a class="headerlink" href="#using-napari-to-visualize-and-interact-with-images" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.1. </span>Using Napari to visualize and interact with images<a class="headerlink" href="#using-napari-to-visualize-and-interact-with-images" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">Matplotlib</a> is the most flexible and traditional library to display images, also in jupyter notebooks. There are other very good options like <a class="reference external" href="https://seaborn.pydata.org/">seaborn</a>, <a class="reference external" href="https://plotly.com/python/">plotly</a> and <a class="reference external" href="https://docs.bokeh.org/en/latest/docs/gallery.html#standalone-examples">bokeh</a>, with different pros and cons.</p>
 <p>Regarding interaction, even though these libraries can be interative, <a class="reference external" href="https://napari.org/gallery.html">Napari</a> stands out as a fast, interactive, multi-dimensional image viewer in Python.</p>
 <p>In this notebook, we will open a napari viewer from here, add images and perform some interactions with them.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="opening-the-napari-viewer">
-<h1>Opening the napari Viewer<a class="headerlink" href="#opening-the-napari-viewer" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.2. </span>Opening the napari Viewer<a class="headerlink" href="#opening-the-napari-viewer" title="Permalink to this headline">#</a></h1>
 <p>In order to open the viewer, we first have to import napari</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -580,7 +604,7 @@ requires access to qt_viewer, please open an issue to discuss.
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="opening-images-in-napari-from-a-notebook">
-<h1>Opening images in napari from a notebook<a class="headerlink" href="#opening-images-in-napari-from-a-notebook" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.3. </span>Opening images in napari from a notebook<a class="headerlink" href="#opening-images-in-napari-from-a-notebook" title="Permalink to this headline">#</a></h1>
 <p>Now, let’s load some example images here and visualize them in napari.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,7 +653,7 @@ requires access to qt_viewer, please open an issue to discuss.
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="interacting-with-the-image">
-<h1>Interacting with the image<a class="headerlink" href="#interacting-with-the-image" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.4. </span>Interacting with the image<a class="headerlink" href="#interacting-with-the-image" title="Permalink to this headline">#</a></h1>
 <p>In the viewer, we can interact with the image in several ways. We can zoom in/out with the mouse wheel for example.</p>
 <p>Also, we can change something in the viewer, like the colormap, and retrieve this change back in code. Before we do that, let’s get the current colormap of this layer.</p>
 <p>We have to follow a hierarchy to get to the image colormap:</p>
@@ -682,7 +706,7 @@ requires access to qt_viewer, please open an issue to discuss.
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.5. </span>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h1>
 <p>Add the brick image below to the viewer and now do the other way around: by code, change the colormap to <code class="docutils literal notranslate"><span class="pre">red</span></code> and the opacity to <code class="docutils literal notranslate"><span class="pre">0.5</span></code>. Check the effects in the viewer.</p>
 <p>*Hint: you can access and modify the opacity in a similar fashion to the colormap:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. viewer
@@ -728,6 +752,20 @@ requires access to qt_viewer, please open an issue to discuss.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="readme.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Using Jupyter Notebooks and Napari</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02_my_segmentation_workflow.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>My Segmentation Workflow</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
