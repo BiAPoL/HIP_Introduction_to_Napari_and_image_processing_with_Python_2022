@@ -8,6 +8,9 @@ See also
 * [Bio-image Analysis Notebooks](https://haesleinhuepf.github.io/BioImageAnalysisNotebooks/intro.html)
 * [Digital Sreeni's Python / Image Processing / Microscopy Youtube Channel](https://youtube.com/digitalsreeni)
 
+## Feedback & questions
+In case you have any questions about the materials, please open a thread on [image.sc](https://image.sc).
+
 ## Copyright
 These teaching materials are licensed [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and thus, can be reused freely as long as licensees stick to the simple rules listed in the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license agreement.
 

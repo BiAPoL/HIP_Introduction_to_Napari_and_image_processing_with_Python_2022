@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.1. Quantitative image analysis &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
+    <title>6.1. Quantitative image analysis using scikit-image &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.4. Statistics using SimpleITK" href="02_statistics_with_simpleitk.html" />
+    <link rel="next" title="6.4. Quantitative image analysis using SimpleITK" href="02_statistics_with_simpleitk.html" />
     <link rel="prev" title="6. Feature extraction" href="readme.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -244,12 +244,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6.1. Quantitative image analysis
+     6.1. Quantitative image analysis using scikit-image
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02_statistics_with_simpleitk.html">
-     6.4. Statistics using SimpleITK
+     6.4. Quantitative image analysis using SimpleITK
     </a>
    </li>
   </ul>
@@ -472,7 +472,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   6.1. Quantitative image analysis
+   6.1. Quantitative image analysis using scikit-image
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -494,7 +494,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Quantitative image analysis</h1>
+                <h1>Quantitative image analysis using scikit-image</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -506,7 +506,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   6.1. Quantitative image analysis
+   6.1. Quantitative image analysis using scikit-image
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -529,8 +529,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="quantitative-image-analysis">
-<h1><span class="section-number">6.1. </span>Quantitative image analysis<a class="headerlink" href="#quantitative-image-analysis" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="quantitative-image-analysis-using-scikit-image">
+<h1><span class="section-number">6.1. </span>Quantitative image analysis using scikit-image<a class="headerlink" href="#quantitative-image-analysis-using-scikit-image" title="Permalink to this headline">#</a></h1>
 <p>After segmenting and labeling objects in an image, we can measure properties of these objects.</p>
 <p>See also</p>
 <ul class="simple">
@@ -549,13 +549,14 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>As an example image we will use an extracgt from the <a class="reference external" href="https://bbbc.broadinstitute.org/BBBC007">BBBC007 dataset</a> image set version 1 (Jones et al., Proc. ICCV Workshop on Computer Vision for Biomedical Image Applications, 2005), available from the Broad Bioimage Benchmark Collection [Ljosa et al., Nature Methods, 2012].</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load image</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/blobs.tif&quot;</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_batch/20P1_POS0010_D_1UL.tif&quot;</span><span class="p">)</span>
 
 <span class="c1"># denoising</span>
-<span class="n">blurred_image</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">blurred_image</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="c1"># binarization</span>
 <span class="n">threshold</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">blurred_image</span><span class="p">)</span>
@@ -570,246 +571,89 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/01_quantitative_measurements_2_0.png" src="../_images/01_quantitative_measurements_2_0.png" />
+<img alt="../_images/01_quantitative_measurements_3_0.png" src="../_images/01_quantitative_measurements_3_0.png" />
 </div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="measurements-region-properties">
 <h1><span class="section-number">6.2. </span>Measurements / region properties<a class="headerlink" href="#measurements-region-properties" title="Permalink to this headline">#</a></h1>
-<p>To read out properties from regions, we use the <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.regionprops">regionprops</a> function:</p>
+<p>To read out properties from regions, we use the <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.regionprops_table">regionprops_table</a> function. To see which features can be measured, please refer to the documentation of <a class="reference external" href="https://scikit-image.org/docs/dev/api/skimage.measure.html#skimage.measure.regionprops">regionprops</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># analyse objects</span>
-<span class="n">properties</span> <span class="o">=</span> <span class="n">measure</span><span class="o">.</span><span class="n">regionprops</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">intensity_image</span><span class="o">=</span><span class="n">image</span><span class="p">)</span>
+<span class="n">properties</span> <span class="o">=</span> <span class="n">measure</span><span class="o">.</span><span class="n">regionprops_table</span><span class="p">(</span><span class="n">label_image</span><span class="p">,</span> <span class="n">intensity_image</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> 
+                                      <span class="n">properties</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="s1">&#39;intensity_mean&#39;</span><span class="p">,</span> <span class="s1">&#39;major_axis_length&#39;</span><span class="p">,</span> <span class="s1">&#39;minor_axis_length&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The results are stored as <code class="docutils literal notranslate"><span class="pre">RegionProps</span></code> objects, which are not very informative:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;skimage.measure._regionprops.RegionProperties at 0x195f1e6a0&gt;,
- &lt;skimage.measure._regionprops.RegionProperties at 0x1961f61c0&gt;,
- &lt;skimage.measure._regionprops.RegionProperties at 0x1961f6040&gt;,
- &lt;skimage.measure._regionprops.RegionProperties at 0x1961f60a0&gt;,
- &lt;skimage.measure._regionprops.RegionProperties at 0x110c69310&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;area&#39;: array([139, 360,  43, 140, 144, 194, 251, 310, 276, 160, 283, 539, 237,
+         51, 211, 402, 156, 278, 273, 972, 320, 305, 326, 207, 294, 224,
+        213, 327, 319, 291, 263, 238, 250, 277, 264, 226, 267, 300, 290,
+        282, 307,  84, 315, 206,  45,  33,  16]),
+ &#39;intensity_mean&#39;: array([ 96.54676259,  86.61388889,  91.48837209,  73.74285714,
+         89.375     ,  85.72680412, 100.03984064, 106.14516129,
+        113.82246377,  98.30625   , 110.24381625,  93.82931354,
+         96.18987342,  64.23529412,  94.84834123, 101.45273632,
+         81.39102564, 115.72661871, 108.32967033,  98.72016461,
+        120.04375   , 104.26885246, 114.30674847,  81.94202899,
+        114.47619048,  88.33482143,  95.05633803,  93.26911315,
+        105.5830721 , 110.10309278, 102.33079848, 105.47478992,
+        100.256     , 118.20938628,  88.06060606,  93.76548673,
+        107.54681648, 104.21333333,  92.9137931 , 104.87943262,
+        101.10423453,  86.86904762,  91.13333333,  94.26213592,
+         68.37777778,  76.72727273,  76.75      ]),
+ &#39;major_axis_length&#39;: array([17.50410401, 35.74680768, 12.96788442, 18.94050837, 13.63930773,
+        17.90434696, 19.59960381, 21.68348763, 21.49587402, 15.04257295,
+        19.82178058, 30.75560175, 20.41073678,  8.50599893, 18.74314548,
+        24.25603866, 16.09112371, 21.44453279, 19.89817937, 57.31103495,
+        22.67697926, 21.09018439, 22.07441256, 19.11287595, 19.7177777 ,
+        18.16615339, 17.24876979, 22.54114086, 21.04530156, 19.60688318,
+        19.3948345 , 18.37158206, 18.95328718, 21.73074014, 20.92467079,
+        18.07876584, 19.0661401 , 21.47445636, 24.74551721, 20.70344031,
+        20.15554708, 14.82486664, 20.92709533, 23.38187856,  9.40637134,
+        10.72427534,  7.74596669]),
+ &#39;minor_axis_length&#39;: array([10.2927697 , 14.98312426,  4.35157341, 10.31440443, 13.45853236,
+        13.82984942, 16.30411403, 18.35228668, 16.38949971, 13.54106251,
+        18.25604373, 23.86964025, 14.83203512,  7.60835863, 14.35375932,
+        22.37062728, 12.36945499, 16.66114148, 17.48026603, 25.5023541 ,
+        18.03965907, 18.41775182, 18.80848118, 14.11734515, 19.05302222,
+        15.69558924, 15.74682632, 18.5781835 , 19.31001227, 18.97935324,
+        17.28272373, 16.96009368, 16.78921681, 16.2409953 , 16.12063476,
+        15.98698808, 17.88121627, 17.8176564 , 14.9985119 , 17.41327927,
+        19.45870689,  7.62239333, 19.20928278, 11.66966783,  6.27644472,
+         4.17456784,  2.78388218])}
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can reorganize the measurements into a dictionary containing arrays. We introduced them earlier as <a class="reference external" href="https://nbviewer.jupyter.org/github/BiAPoL/Bio-image_Analysis_with_Python/blob/main/python_basics/06_Dictionaries_and_tables.ipynb">tables</a>:</p>
+<p>You can also add custom measurements by computing your own metric, for example the <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;area&#39;</span><span class="p">:</span>       <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">area</span>               <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
-    <span class="s1">&#39;mean&#39;</span><span class="p">:</span>       <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">mean_intensity</span>     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">],</span>
-    <span class="s1">&#39;major_axis&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">major_axis_length</span>  <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;major_axis_length&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;minor_axis_length&quot;</span><span class="p">]</span>
 
-<span class="n">statistics</span>
+<span class="n">properties</span><span class="p">[</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;area&#39;: [429,
-  183,
-  658,
-  433,
-  472,
-  280,
-  75,
-  271,
-  227,
-  27,
-  494,
-  649,
-  96,
-  225,
-  448,
-  397,
-  513,
-  423,
-  268,
-  349,
-  158,
-  406,
-  422,
-  254,
-  503,
-  282,
-  675,
-  176,
-  358,
-  542,
-  599,
-  7,
-  635,
-  192,
-  594,
-  19,
-  264,
-  896,
-  473,
-  239,
-  166,
-  408,
-  413,
-  239,
-  374,
-  647,
-  378,
-  577,
-  66,
-  169,
-  467,
-  612,
-  539,
-  203,
-  556,
-  850,
-  278,
-  213,
-  79,
-  88,
-  52,
-  48],
- &#39;mean&#39;: [191.44055944055944,
-  179.84699453551912,
-  205.6048632218845,
-  217.5150115473441,
-  213.03389830508473,
-  205.65714285714284,
-  164.16,
-  176.0590405904059,
-  189.53303964757708,
-  149.33333333333334,
-  190.0080971659919,
-  172.42526964560864,
-  166.41666666666666,
-  196.8,
-  209.03571428571428,
-  180.0705289672544,
-  194.86939571150097,
-  196.27423167848698,
-  200.77611940298507,
-  190.64756446991404,
-  183.69620253164558,
-  187.21182266009853,
-  202.54028436018956,
-  180.5984251968504,
-  198.6958250497018,
-  189.33333333333334,
-  199.07555555555555,
-  195.3181818181818,
-  197.7877094972067,
-  198.760147601476,
-  190.85141903171953,
-  146.28571428571428,
-  193.22204724409448,
-  181.83333333333334,
-  210.45117845117846,
-  150.31578947368422,
-  189.93939393939394,
-  198.59821428571428,
-  205.5137420718816,
-  191.59832635983264,
-  184.09638554216866,
-  179.80392156862746,
-  199.94188861985472,
-  188.21757322175733,
-  195.76470588235293,
-  200.70479134466768,
-  208.23280423280423,
-  201.01213171577123,
-  188.36363636363637,
-  181.53846153846155,
-  167.58886509635974,
-  220.0261437908497,
-  189.5213358070501,
-  199.96059113300493,
-  216.93525179856115,
-  197.9294117647059,
-  190.44604316546761,
-  184.52582159624413,
-  184.81012658227849,
-  182.72727272727272,
-  189.53846153846155,
-  173.83333333333334],
- &#39;major_axis&#39;: [34.77923003414236,
-  20.950530036869296,
-  30.19848422590625,
-  24.508790749585156,
-  31.08476574192099,
-  20.456703267018653,
-  10.455950805204104,
-  22.270013595805494,
-  18.204772873013326,
-  12.678548278670085,
-  26.121885258285065,
-  33.385906778814366,
-  12.546653692400314,
-  18.35737770149141,
-  26.27274937409412,
-  35.8698551687111,
-  27.860019629951697,
-  28.010713581438814,
-  21.468307192278967,
-  22.917689441728474,
-  15.666167580602863,
-  23.865287484124742,
-  32.6668803721007,
-  19.57228408508096,
-  33.24776088170501,
-  20.24089328396192,
-  36.442424525819675,
-  20.498286890054775,
-  23.711197998545444,
-  29.20849759104235,
-  47.75343594118352,
-  3.0237157840738176,
-  40.67149576429511,
-  16.77158509151243,
-  28.811758210746788,
-  6.09093638927516,
-  20.588317981737514,
-  54.585718360111564,
-  32.95587965343868,
-  19.25126182233261,
-  16.687880082810175,
-  26.756617235381256,
-  25.62619404615955,
-  18.831258251302966,
-  24.783530938010692,
-  30.43602504101513,
-  23.49797787654461,
-  27.804675105924606,
-  16.651155953717765,
-  17.042194757272345,
-  35.316994908476254,
-  32.401948630679065,
-  30.13681620111402,
-  24.67233590691917,
-  27.47945909705002,
-  41.32954022794983,
-  21.637743417307323,
-  18.753879494637765,
-  18.287488895428375,
-  21.673692014391232,
-  14.33510391276191,
-  16.925659950161798]}
-</pre></div>
-</div>
-</div>
-</div>
-<p>You can also add custom columns by computing your own metric, for example the <code class="docutils literal notranslate"><span class="pre">aspect_ratio</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistics</span><span class="p">[</span><span class="s1">&#39;aspect_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">.</span><span class="n">major_axis_length</span> <span class="o">/</span> <span class="n">p</span><span class="o">.</span><span class="n">minor_axis_length</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">properties</span><span class="p">]</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.70062136, 2.38580466, 2.98004496, 1.83631624, 1.01343203,
+       1.29461619, 1.20212627, 1.18151422, 1.31156377, 1.11088572,
+       1.0857654 , 1.288482  , 1.37612517, 1.11798081, 1.30580046,
+       1.08428067, 1.30087572, 1.28709865, 1.13832246, 2.2472841 ,
+       1.25706252, 1.14510091, 1.17364142, 1.35385767, 1.03488977,
+       1.157405  , 1.09538071, 1.21331242, 1.08986474, 1.03306382,
+       1.12220937, 1.08322409, 1.12889645, 1.33801776, 1.29800539,
+       1.13084252, 1.0662664 , 1.20523462, 1.64986482, 1.18894552,
+       1.03581123, 1.94490969, 1.08942617, 2.0036456 , 1.49867827,
+       2.56895462, 2.78243337])
 </pre></div>
 </div>
 </div>
@@ -819,7 +663,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">statistics</span><span class="p">)</span>
+<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">properties</span><span class="p">)</span>
 <span class="n">dataframe</span>
 </pre></div>
 </div>
@@ -844,98 +688,397 @@ title="Print to PDF"
     <tr style="text-align: right;">
       <th></th>
       <th>area</th>
-      <th>mean</th>
-      <th>major_axis</th>
+      <th>intensity_mean</th>
+      <th>major_axis_length</th>
+      <th>minor_axis_length</th>
       <th>aspect_ratio</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>429</td>
-      <td>191.440559</td>
-      <td>34.779230</td>
-      <td>2.088249</td>
+      <td>139</td>
+      <td>96.546763</td>
+      <td>17.504104</td>
+      <td>10.292770</td>
+      <td>1.700621</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>183</td>
-      <td>179.846995</td>
-      <td>20.950530</td>
-      <td>1.782168</td>
+      <td>360</td>
+      <td>86.613889</td>
+      <td>35.746808</td>
+      <td>14.983124</td>
+      <td>2.385805</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>658</td>
-      <td>205.604863</td>
-      <td>30.198484</td>
-      <td>1.067734</td>
+      <td>43</td>
+      <td>91.488372</td>
+      <td>12.967884</td>
+      <td>4.351573</td>
+      <td>2.980045</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>433</td>
-      <td>217.515012</td>
-      <td>24.508791</td>
-      <td>1.061942</td>
+      <td>140</td>
+      <td>73.742857</td>
+      <td>18.940508</td>
+      <td>10.314404</td>
+      <td>1.836316</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>472</td>
-      <td>213.033898</td>
-      <td>31.084766</td>
-      <td>1.579415</td>
+      <td>144</td>
+      <td>89.375000</td>
+      <td>13.639308</td>
+      <td>13.458532</td>
+      <td>1.013432</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+      <th>5</th>
+      <td>194</td>
+      <td>85.726804</td>
+      <td>17.904347</td>
+      <td>13.829849</td>
+      <td>1.294616</td>
     </tr>
     <tr>
-      <th>57</th>
+      <th>6</th>
+      <td>251</td>
+      <td>100.039841</td>
+      <td>19.599604</td>
+      <td>16.304114</td>
+      <td>1.202126</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>310</td>
+      <td>106.145161</td>
+      <td>21.683488</td>
+      <td>18.352287</td>
+      <td>1.181514</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>276</td>
+      <td>113.822464</td>
+      <td>21.495874</td>
+      <td>16.389500</td>
+      <td>1.311564</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>160</td>
+      <td>98.306250</td>
+      <td>15.042573</td>
+      <td>13.541063</td>
+      <td>1.110886</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>283</td>
+      <td>110.243816</td>
+      <td>19.821781</td>
+      <td>18.256044</td>
+      <td>1.085765</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>539</td>
+      <td>93.829314</td>
+      <td>30.755602</td>
+      <td>23.869640</td>
+      <td>1.288482</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>237</td>
+      <td>96.189873</td>
+      <td>20.410737</td>
+      <td>14.832035</td>
+      <td>1.376125</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>51</td>
+      <td>64.235294</td>
+      <td>8.505999</td>
+      <td>7.608359</td>
+      <td>1.117981</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>211</td>
+      <td>94.848341</td>
+      <td>18.743145</td>
+      <td>14.353759</td>
+      <td>1.305800</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>402</td>
+      <td>101.452736</td>
+      <td>24.256039</td>
+      <td>22.370627</td>
+      <td>1.084281</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>156</td>
+      <td>81.391026</td>
+      <td>16.091124</td>
+      <td>12.369455</td>
+      <td>1.300876</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>278</td>
+      <td>115.726619</td>
+      <td>21.444533</td>
+      <td>16.661141</td>
+      <td>1.287099</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>273</td>
+      <td>108.329670</td>
+      <td>19.898179</td>
+      <td>17.480266</td>
+      <td>1.138322</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>972</td>
+      <td>98.720165</td>
+      <td>57.311035</td>
+      <td>25.502354</td>
+      <td>2.247284</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>320</td>
+      <td>120.043750</td>
+      <td>22.676979</td>
+      <td>18.039659</td>
+      <td>1.257063</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>305</td>
+      <td>104.268852</td>
+      <td>21.090184</td>
+      <td>18.417752</td>
+      <td>1.145101</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>326</td>
+      <td>114.306748</td>
+      <td>22.074413</td>
+      <td>18.808481</td>
+      <td>1.173641</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>207</td>
+      <td>81.942029</td>
+      <td>19.112876</td>
+      <td>14.117345</td>
+      <td>1.353858</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>294</td>
+      <td>114.476190</td>
+      <td>19.717778</td>
+      <td>19.053022</td>
+      <td>1.034890</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>224</td>
+      <td>88.334821</td>
+      <td>18.166153</td>
+      <td>15.695589</td>
+      <td>1.157405</td>
+    </tr>
+    <tr>
+      <th>26</th>
       <td>213</td>
-      <td>184.525822</td>
-      <td>18.753879</td>
-      <td>1.296143</td>
+      <td>95.056338</td>
+      <td>17.248770</td>
+      <td>15.746826</td>
+      <td>1.095381</td>
     </tr>
     <tr>
-      <th>58</th>
-      <td>79</td>
-      <td>184.810127</td>
-      <td>18.287489</td>
-      <td>3.173540</td>
+      <th>27</th>
+      <td>327</td>
+      <td>93.269113</td>
+      <td>22.541141</td>
+      <td>18.578184</td>
+      <td>1.213312</td>
     </tr>
     <tr>
-      <th>59</th>
-      <td>88</td>
-      <td>182.727273</td>
-      <td>21.673692</td>
-      <td>4.021193</td>
+      <th>28</th>
+      <td>319</td>
+      <td>105.583072</td>
+      <td>21.045302</td>
+      <td>19.310012</td>
+      <td>1.089865</td>
     </tr>
     <tr>
-      <th>60</th>
-      <td>52</td>
-      <td>189.538462</td>
-      <td>14.335104</td>
-      <td>2.839825</td>
+      <th>29</th>
+      <td>291</td>
+      <td>110.103093</td>
+      <td>19.606883</td>
+      <td>18.979353</td>
+      <td>1.033064</td>
     </tr>
     <tr>
-      <th>61</th>
-      <td>48</td>
-      <td>173.833333</td>
-      <td>16.925660</td>
-      <td>4.417297</td>
+      <th>30</th>
+      <td>263</td>
+      <td>102.330798</td>
+      <td>19.394835</td>
+      <td>17.282724</td>
+      <td>1.122209</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>238</td>
+      <td>105.474790</td>
+      <td>18.371582</td>
+      <td>16.960094</td>
+      <td>1.083224</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>250</td>
+      <td>100.256000</td>
+      <td>18.953287</td>
+      <td>16.789217</td>
+      <td>1.128896</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>277</td>
+      <td>118.209386</td>
+      <td>21.730740</td>
+      <td>16.240995</td>
+      <td>1.338018</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>264</td>
+      <td>88.060606</td>
+      <td>20.924671</td>
+      <td>16.120635</td>
+      <td>1.298005</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>226</td>
+      <td>93.765487</td>
+      <td>18.078766</td>
+      <td>15.986988</td>
+      <td>1.130843</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>267</td>
+      <td>107.546816</td>
+      <td>19.066140</td>
+      <td>17.881216</td>
+      <td>1.066266</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>300</td>
+      <td>104.213333</td>
+      <td>21.474456</td>
+      <td>17.817656</td>
+      <td>1.205235</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>290</td>
+      <td>92.913793</td>
+      <td>24.745517</td>
+      <td>14.998512</td>
+      <td>1.649865</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>282</td>
+      <td>104.879433</td>
+      <td>20.703440</td>
+      <td>17.413279</td>
+      <td>1.188946</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>307</td>
+      <td>101.104235</td>
+      <td>20.155547</td>
+      <td>19.458707</td>
+      <td>1.035811</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>84</td>
+      <td>86.869048</td>
+      <td>14.824867</td>
+      <td>7.622393</td>
+      <td>1.944910</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>315</td>
+      <td>91.133333</td>
+      <td>20.927095</td>
+      <td>19.209283</td>
+      <td>1.089426</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>206</td>
+      <td>94.262136</td>
+      <td>23.381879</td>
+      <td>11.669668</td>
+      <td>2.003646</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>45</td>
+      <td>68.377778</td>
+      <td>9.406371</td>
+      <td>6.276445</td>
+      <td>1.498678</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>33</td>
+      <td>76.727273</td>
+      <td>10.724275</td>
+      <td>4.174568</td>
+      <td>2.568955</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>16</td>
+      <td>76.750000</td>
+      <td>7.745967</td>
+      <td>2.783882</td>
+      <td>2.782433</td>
     </tr>
   </tbody>
 </table>
-<p>62 rows × 4 columns</p>
 </div></div></div>
 </div>
 <p>Those dataframes can be saved to disk conveniently:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;blobs_analysis.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_analysis.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -946,12 +1089,12 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># measure mean area</span>
-<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">statistics</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>355.3709677419355
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>253.36170212765958
 </pre></div>
 </div>
 </div>
@@ -1011,7 +1154,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="02_statistics_with_simpleitk.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4. </span>Statistics using SimpleITK</p>
+        <p class="prev-next-title"><span class="section-number">6.4. </span>Quantitative image analysis using SimpleITK</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

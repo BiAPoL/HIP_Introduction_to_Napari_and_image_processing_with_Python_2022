@@ -244,12 +244,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
-     6.1. Quantitative image analysis
+     6.1. Quantitative image analysis using scikit-image
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
-     6.4. Statistics using SimpleITK
+     6.4. Quantitative image analysis using SimpleITK
     </a>
    </li>
   </ul>
@@ -475,11 +475,6 @@ title="Print to PDF"
    7.2.1. Combining columns of tables
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   7.2.2. Exercise
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -502,11 +497,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#combining-columns-of-tables">
    7.2.1. Combining columns of tables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   7.2.2. Exercise
   </a>
  </li>
 </ul>
@@ -860,74 +850,6 @@ title="Print to PDF"
       <td>NaN</td>
       <td>18</td>
       <td>0.3</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</section>
-<section id="exercise">
-<h2><span class="section-number">7.2.2. </span>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
-<p>The following additional table is given. Combine it with the tables above.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">&quot;label&quot;</span><span class="p">:</span>       <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-    <span class="s2">&quot;folder&quot;</span><span class="p">:</span>      <span class="p">[</span><span class="s2">&quot;E:/data/experiment5/&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="s2">&quot;filename&quot;</span><span class="p">:</span>    <span class="p">[</span><span class="s2">&quot;image1.tif&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="p">})</span>
-<span class="n">table3</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>label</th>
-      <th>folder</th>
-      <th>filename</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>E:/data/experiment5/</td>
-      <td>image1.tif</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>E:/data/experiment5/</td>
-      <td>image1.tif</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>E:/data/experiment5/</td>
-      <td>image1.tif</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>E:/data/experiment5/</td>
-      <td>image1.tif</td>
     </tr>
   </tbody>
 </table>

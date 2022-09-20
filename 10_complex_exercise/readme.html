@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Image segmentation &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
+    <title>Complex exercise &#8212; Image Analyis with Napari with Python (HIP 2022)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.1. Image segmentation" href="01_Introduction_to_image_segmentation.html" />
-    <link rel="prev" title="4. Image Processing" href="../04_Image_Processing/readme.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_Introduction_BIA/readme.html">
    1. Introduction to Napari for image analysis
@@ -195,38 +193,38 @@ const thebe_selector_output = ".output, .cell_output"
    4. Image Processing
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../07_Image_segmentation/readme.html">
    5. Image segmentation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_Introduction_to_image_segmentation.html">
+    <a class="reference internal" href="../07_Image_segmentation/01_Introduction_to_image_segmentation.html">
      5.1. Image segmentation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="02_voronoi_otsu_labeling.html">
+    <a class="reference internal" href="../07_Image_segmentation/02_voronoi_otsu_labeling.html">
      5.2. Voronoi-Otsu-labeling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="03_label_visualization.html">
+    <a class="reference internal" href="../07_Image_segmentation/03_label_visualization.html">
      5.3. Label image visualization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04_segmentation_2d_membranes.html">
+    <a class="reference internal" href="../07_Image_segmentation/04_segmentation_2d_membranes.html">
      5.4. Seeded watershed for membrane-based cell segmentation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="06_open_close_labels.html">
+    <a class="reference internal" href="../07_Image_segmentation/06_open_close_labels.html">
      5.5. Label image refinement
     </a>
    </li>
@@ -382,7 +380,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/07_Image_segmentation/readme.md"
+        <a href="../_sources/10_complex_exercise/readme.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -431,7 +429,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Image segmentation</h1>
+                <h1>Complex exercise</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -443,12 +441,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="image-segmentation">
-<h1><span class="section-number">5. </span>Image segmentation<a class="headerlink" href="#image-segmentation" title="Permalink to this headline">#</a></h1>
-<p>In this chapter we will dive into image segmentation. We will binarize images, label objects in images, and we will post-process binary images and label images. The goal is to learn how to differentiate cells and nuclei from the image background as well as how to modify those segmentations to better represent of what we think the segmentation should look like.</p>
-<p>The slides are available online [image_segmentation.pdf].</p>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="complex-exercise">
+<h1>Complex exercise<a class="headerlink" href="#complex-exercise" title="Permalink to this headline">#</a></h1>
+<p>This final chapted contains a complex exercise where you can test what you learned during this course. In case you are curious, there is a solution notebook in the same folder available via the github repository. If you have a github account, don’t forget to leave a <code class="docutils literal notranslate"><span class="pre">star</span></code> on the github repository in case you enjoyed the course. :-)</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -464,7 +459,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./07_Image_segmentation"
+            path: "./10_complex_exercise"
         },
         predefinedOutput: true
     }
@@ -478,20 +473,6 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../04_Image_Processing/readme.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Image Processing</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="01_Introduction_to_image_segmentation.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.1. </span>Image segmentation</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
