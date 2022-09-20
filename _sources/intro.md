@@ -1,1 +1,3 @@
-# HIP_Introduction_to_Napari_and_image_processing_with_Python_2022
+# HIP Introduction to Napari and image processing with Python 2022
+
+Course description
