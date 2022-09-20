@@ -18,6 +18,10 @@ chapters:
   - file: 02_Introduction_Jupyter_lab/04_Dont_try_this_at_home
 
 - file: 03_Introduction_Jupyter_with_napari/readme
+  sections:
+  - file: 03_Introduction_Jupyter_with_napari/01_Napari_from_Jupyter_introduction
+  - file: 03_Introduction_Jupyter_with_napari/02_my_segmentation_workflow
+  - file: 03_Introduction_Jupyter_with_napari/03_batch_segmentation_workflow
 
 - file: 04_Image_Processing/readme
 
