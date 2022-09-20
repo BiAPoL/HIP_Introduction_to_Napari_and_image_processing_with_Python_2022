@@ -9,10 +9,11 @@ chapters:
 - file: 01_Introduction_BIA/readme
   sections:
   - file: 01_Introduction_BIA/01_exercise_installation
+  - file: 01_Introduction_BIA/02_exercise_apoc
 
 - file: 02_Introduction_Jupyter_lab/readme
   sections:
-  - file: 02_Introduction_Jupyter_lab/00_trailer
+  - file: 02_Introduction_Jupyter_lab/00_trailer # shall we move this to the next chapter? 
   - file: 02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook
   - file: 02_Introduction_Jupyter_lab/04_Dont_try_this_at_home
 
@@ -21,10 +22,25 @@ chapters:
 - file: 04_Image_Processing/readme
 
 - file: 07_Image_segmentation/readme
+  sections:
+  - file: 07_Image_segmentation/01_Introduction_to_image_segmentation.ipynb
+  - file: 07_Image_segmentation/02_voronoi_otsu_labeling.ipynb
+  - file: 07_Image_segmentation/03_label_visualization.ipynb
+  - file: 07_Image_segmentation/04_segmentation_2d_membranes.ipynb
+  - file: 07_Image_segmentation/06_open_close_labels.ipynb
 
 - file: 08_Feature_extraction/readme
-
+  sections:
+  - file: 08_Feature_extraction/01_quantitative_measurements.ipynb
+  - file: 08_Feature_extraction/02_statistics_with_simpleitk.ipynb
+  
 - file: 08_Pandas/readme
+  sections:
+  - file: 08_Pandas/01_introduction_dataframes.ipynb
+  - file: 08_Pandas/02_append_tables.ipynb
+  - file: 08_Pandas/03_handling_NaNs.ipynb
+  - file: 08_Pandas/04_parametric_maps.ipynb
+  - file: 08_Pandas/05_measurement_visualization_in_napari.ipynb
 
 - file: 09_Seaborn/readme
 
