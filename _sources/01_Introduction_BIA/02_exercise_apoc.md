@@ -27,8 +27,6 @@ Load the "Blobs" example dataset from the menu `File > Open Sample > clEsperanto
 For segmenting objects, we can use the Object Segmentation tool in APOC. Under the hood it uses a pixel classifier and [connected component labeling](https://en.wikipedia.org/wiki/Connected-component_labeling). 
 The following procedure is also shown in [this video](apoc_object_segmentation.mp4).
 
-<iframe src="https://github.com/BiAPoL/HIP_Introduction_to_Napari_and_image_processing_with_Python_2022/raw/main/docs/01_Introduction_BIA/apoc_object_classification.mp4" width=600></iframe>
-
 Start the object segmentation from the `Tools > Segmentation / Labeling > Object Segmentation (APOC)` menu.
 
 ![](apoc2.png)
@@ -65,6 +63,8 @@ If the segmentation works well, consider backing up the `ObjectSegmenter.cl` fil
 Close the `Object segmentation` user interface and hide or delete the `Labels` layer with your manual annotation.
 
 ## Object classification
+Objects can also be classified according to their propeties such as size, intensity and shape.
+The following procedure is also shown in [this video](apoc_object_classification.mp4).
 
 Add another label image.
 ![](apoc21.png)
