@@ -24,7 +24,7 @@ from skimage.color import label2rgb
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2073/3770975195.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2148/3770975195.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0;32mfrom[0m [0mskimage[0m[0;34m.[0m[0mio[0m [0;32mimport[0m [0mimread[0m[0;34m,[0m [0mimshow[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0;32mfrom[0m [0mskimage[0m[0;34m.[0m[0mmeasure[0m [0;32mimport[0m [0mlabel[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m [0;32mfrom[0m [0mskimage[0m[0;34m.[0m[0mcolor[0m [0;32mimport[0m [0mlabel2rgb[0m[0;34m[0m[0;34m[0m[0m
