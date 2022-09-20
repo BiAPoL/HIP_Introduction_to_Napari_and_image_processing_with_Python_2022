@@ -534,20 +534,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2167</span><span class="o">/</span><span class="mf">3419134549.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">napari_segment_blobs_and_things_with_membranes</span> <span class="kn">import</span> <span class="n">voronoi_otsu_labeling</span><span class="p">,</span> \
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                                                            <span class="n">seeded_watershed</span><span class="p">,</span> \
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                                                            <span class="n">local_minima_seeded_watershed</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imshow</span><span class="p">,</span> <span class="n">imsave</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">skimage.filters</span> <span class="kn">import</span> <span class="n">gaussian</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;napari_segment_blobs_and_things_with_membranes&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>We load the <a class="reference external" href="https://scikit-image.org/docs/stable/api/skimage.data.html?highlight=data#skimage.data.cells3d">cells3d example image from scikit-image</a> which is a two-channel image showing nuclei and membrains. For simplicity, we will use a single 2D slice. The shown procedure also works in 3D.</p>
 <div class="cell docutils container">
