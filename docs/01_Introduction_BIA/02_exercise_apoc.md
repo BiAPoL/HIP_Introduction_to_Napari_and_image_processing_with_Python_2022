@@ -111,7 +111,7 @@ Train the classifier again.
 If you are happy with the trained classifier, copy the file to a safe place. When training the next classifier this one might be overwritten.
 
 ## Extra exercise
-Retrain the classifier so that it can differentiate three differen classes:
+Retrain the classifier so that it can differentiate three different classes:
 * Small round objects
 * Large round objects
 * Large elongated objects
