@@ -1,0 +1,34 @@
+# In _toc.yml
+format: jb-book
+root: intro
+
+options:  # The options key will be applied to all chapters, but not sub-sections
+  numbered: True
+
+chapters:
+- file: 01_Introduction_BIA/readme
+  sections:
+  - file: 01_Introduction_BIA/01_exercise_installation
+
+- file: 02_Introduction_Jupyter_lab/readme
+  sections:
+  - file: 02_Introduction_Jupyter_lab/00_trailer
+  - file: 02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook
+  - file: 02_Introduction_Jupyter_lab/04_Dont_try_this_at_home
+
+- file: 03_Introduction_Jupyter_with_napari/readme
+
+- file: 04_Image_Processing/readme
+
+- file: 07_Image_segmentation/readme
+
+- file: 08_Feature_extraction/readme
+
+- file: 08_Pandas/readme
+
+- file: 09_Seaborn/readme
+
+
+
+
+
