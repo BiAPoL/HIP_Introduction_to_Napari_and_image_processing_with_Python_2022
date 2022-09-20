@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.1. Trailer: Bio-image Analysis with Python and Napari" href="00_trailer.html" />
-    <link rel="prev" title="1. Installation" href="../01_Introduction_BIA/01_exercise_installation.html" />
+    <link rel="prev" title="1.2. Exercise: Interactive pixel and object classification" href="../01_Introduction_BIA/02_exercise_apoc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,22 +109,39 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    HIP_Introduction_to_Napari_and_image_processing_with_Python_2022
+                    Image analysis with Python and Napari
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01_Introduction_BIA/01_exercise_installation.html">
-   1. Installation
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01_Introduction_BIA/readme.html">
+   1. Introduction to Napari for image analysis
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_Introduction_BIA/01_exercise_installation.html">
+     1.1. Installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_Introduction_BIA/02_exercise_apoc.html">
+     1.2. Exercise: Interactive pixel and object classification
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    2. Introduction to Jupyter Lab
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -145,6 +162,117 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/readme.html">
+   3. Using Jupyter Notebooks and Napari
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04_Image_Processing/readme.html">
+   4. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../07_Image_segmentation/readme.html">
+   5. Image segmentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/01_Introduction_to_image_segmentation.html">
+     5.1. Image segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/02_voronoi_otsu_labeling.html">
+     5.2. Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/03_label_visualization.html">
+     5.3. Label image visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/04_segmentation_2d_membranes.html">
+     5.4. Seeded watershed for membrane-based cell segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/06_open_close_labels.html">
+     5.5. Label image refinement
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08_Feature_extraction/readme.html">
+   6. Feature extraction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
+     6.1. Quantitative image analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
+     6.4. Statistics using SimpleITK
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08_Pandas/readme.html">
+   7. Working with tabular data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
+     7.1. Introduction to working with DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
+     7.2. Appending tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
+     7.3. Handling NaN values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
+     7.5. Parametric maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
+     7.6. Interacting with measurements in Napari
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../09_Seaborn/readme.html">
+   8. Plotting Data with Seaborn
+  </a>
  </li>
 </ul>
 
@@ -295,6 +423,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-jupyter-lab">
 <h1><span class="section-number">2. </span>Introduction to Jupyter Lab<a class="headerlink" href="#introduction-to-jupyter-lab" title="Permalink to this headline">#</a></h1>
+<p>In this chapter we will introduce <a class="reference external" href="https://jupyter.org">Jupyter lab</a> an interactive environment for developing Python code in notebooks.
+The slides are available <span class="xref myst">online</span>. Afterwards, will immediately write our own notebooks and learn how to use them properly avoiding common pitfalls.</p>
+<p>See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=2KF8vBrp3Zw">Guillaume Witz’ NEUBIAS Academy &#64;HOME introducing Python and Jupyter notebooks</a> (<a class="reference external" href="https://github.com/guiwitz/neubias_academy_biapy">Materials</a>)</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -326,11 +460,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../01_Introduction_BIA/01_exercise_installation.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../01_Introduction_BIA/02_exercise_apoc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Installation</p>
+            <p class="prev-next-title"><span class="section-number">1.2. </span>Exercise: Interactive pixel and object classification</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="00_trailer.html" title="next page">

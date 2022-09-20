@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>HIP Introduction to Napari and image processing with Python 2022 &#8212; HIP Introduction to Napari and image processing with Python 2022</title>
+    <title>Image analysis with Python and Napari &#8212; HIP Introduction to Napari and image processing with Python 2022</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Installation" href="01_Introduction_BIA/readme.html" />
+    <link rel="next" title="1. Introduction to Napari for image analysis" href="01_Introduction_BIA/readme.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,14 +108,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    HIP Introduction to Napari and image processing with Python 2022
+                    Image analysis with Python and Napari
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="01_Introduction_BIA/readme.html">
-   1. Installation
+   1. Introduction to Napari for image analysis
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -126,6 +126,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="01_Introduction_BIA/01_exercise_installation.html">
      1.1. Installation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_Introduction_BIA/02_exercise_apoc.html">
+     1.2. Exercise: Interactive pixel and object classification
     </a>
    </li>
   </ul>
@@ -167,20 +172,101 @@ const thebe_selector_output = ".output, .cell_output"
    4. Image Processing
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="07_Image_segmentation/readme.html">
    5. Image segmentation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_Image_segmentation/01_Introduction_to_image_segmentation.html">
+     5.1. Image segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_Image_segmentation/02_voronoi_otsu_labeling.html">
+     5.2. Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_Image_segmentation/03_label_visualization.html">
+     5.3. Label image visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_Image_segmentation/04_segmentation_2d_membranes.html">
+     5.4. Seeded watershed for membrane-based cell segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07_Image_segmentation/06_open_close_labels.html">
+     5.5. Label image refinement
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="08_Feature_extraction/readme.html">
    6. Feature extraction
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Feature_extraction/01_quantitative_measurements.html">
+     6.1. Quantitative image analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Feature_extraction/02_statistics_with_simpleitk.html">
+     6.4. Statistics using SimpleITK
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="08_Pandas/readme.html">
    7. Working with tabular data
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Pandas/01_introduction_dataframes.html">
+     7.1. Introduction to working with DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Pandas/02_append_tables.html">
+     7.2. Appending tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Pandas/03_handling_NaNs.html">
+     7.3. Handling NaN values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Pandas/04_parametric_maps.html">
+     7.5. Parametric maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="08_Pandas/05_measurement_visualization_in_napari.html">
+     7.6. Interacting with measurements in Napari
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_Seaborn/readme.html">
@@ -310,23 +396,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copyright">
+   Copyright
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HIP Introduction to Napari and image processing with Python 2022</h1>
+                <h1>Image analysis with Python and Napari</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copyright">
+   Copyright
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -334,9 +467,25 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="hip-introduction-to-napari-and-image-processing-with-python-2022">
-<h1>HIP Introduction to Napari and image processing with Python 2022<a class="headerlink" href="#hip-introduction-to-napari-and-image-processing-with-python-2022" title="Permalink to this headline">#</a></h1>
-<p>Course description</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="image-analysis-with-python-and-napari">
+<h1>Image analysis with Python and Napari<a class="headerlink" href="#image-analysis-with-python-and-napari" title="Permalink to this headline">#</a></h1>
+<p>In this Jupyter book we will introduce you to the basics of image processing <a class="reference external" href="https://python.org/">Python</a> and <a class="reference external" href="https://napari.org/">Napari</a>. The one-day course is focused on processing microscopy images showing cells and nuclei. We will dive through segmenting objects, measuring their properties, managing measurements in tables and plotting results.</p>
+<section id="copyright">
+<h2>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline">#</a></h2>
+<p>These teaching materials are licensed <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> and thus, can be reused freely as long as licensees stick to the simple rules listed in the <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> license agreement.</p>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
+<p>We would like to acknowledge all contributors who spend time in the past years to make slides and notebooks we are reusing there, in particular Johannes Müller (PoL, TU Dresden) and Benoit Lombardot (MPI-CBG Dresden). This project was supported by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy – EXC2068 - <a class="reference external" href="https://physics-of-life.tu-dresden.de/">Cluster of Excellence “Physics of Life” of TU Dresden</a>. We also acknowledge <a class="reference external" href="https://helmholtz-imaging.de/">Helmholtz Imaging Platform for organizing and funding this course</a>.</p>
+<p>See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://scikit-image.org/docs/stable/user_guide/tutorials.html">Scikit-image Tutorials</a></p></li>
+<li><p><a class="reference external" href="https://napari.org/stable/tutorials/index.html">Napari Tutorials</a></p></li>
+<li><p><a class="reference external" href="https://napari.org/stable/further-resources/napari-workshops.html">Napari Workshop Materials</a></p></li>
+<li><p><a class="reference external" href="https://haesleinhuepf.github.io/BioImageAnalysisNotebooks/intro.html">Bio-image Analysis Notebooks</a></p></li>
+<li><p><a class="reference external" href="https://youtube.com/digitalsreeni">Digital Sreeni’s Python / Image Processing / Microscopy Youtube Channel</a></p></li>
+</ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -371,7 +520,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="01_Introduction_BIA/readme.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Installation</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction to Napari for image analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
