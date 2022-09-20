@@ -4,7 +4,7 @@ title: HIP Introduction to Napari and image processing with Python 2022
 author: Robert Haase and Marcelo Zoccoler
 logo: biapol_logo.png
 execute:
-  execute_notebooks: force
+  execute_notebooks: off
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
