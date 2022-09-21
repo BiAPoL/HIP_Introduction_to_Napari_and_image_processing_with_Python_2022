@@ -13,7 +13,7 @@ chapters:
 
 - file: 02_Introduction_Jupyter_lab/readme
   sections:
-  - file: 02_Introduction_Jupyter_lab/00_trailer # shall we move this to the next chapter? 
+  - file: 02_Introduction_Jupyter_lab/00_trailer # shall we move this to the next chapter? # We should merge with #2 of next section
   - file: 02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook
   - file: 02_Introduction_Jupyter_lab/04_Dont_try_this_at_home
 
@@ -24,6 +24,11 @@ chapters:
   - file: 03_Introduction_Jupyter_with_napari/03_batch_segmentation_workflow
 
 - file: 04_Image_Processing/readme
+ sections:
+  - file: 04_Image_Processing/2_Histogram
+  - file: 04_Image_Processing/4_Manual_Binarization
+  - file: 04_Image_Processing/5_Image_Filters
+  - file: 04_Image_Processing/6_Morphological_operations
 
 - file: 07_Image_segmentation/readme
   sections:
@@ -47,6 +52,10 @@ chapters:
   - file: 08_Pandas/05_measurement_visualization_in_napari.ipynb
 
 - file: 09_Seaborn/readme
+  sections:
+  - file: 09_Seaborn/01_Plotting_Data_with_Python.ipynb
+  - file: 09_Seaborn/02_Introduction_to_Seaborn.ipynb
+  - file: 09_Seaborn/03_Plotting_distributions.ipynb
 
 
 
