@@ -55,6 +55,7 @@ chapters:
   - file: 09_Seaborn/01_Plotting_Data_with_Python.ipynb
   - file: 09_Seaborn/02_Introduction_to_Seaborn.ipynb
   - file: 09_Seaborn/03_Plotting_distributions.ipynb
+  - file: 09_Seaborn/04_Multivariate_views.ipynb
 
 
 
