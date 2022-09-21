@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Binarization &#8212; Image Analyis with Napari and Python (HIP 2022)</title>
+    <title>Multivariate views &#8212; Image Analyis with Napari and Python (HIP 2022)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Plotting Distributions with Seaborn" href="03_Plotting_distributions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,10 +112,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_Introduction_BIA/readme.html">
-   1. Introduction to Napari for image analysis
+   Introduction to Napari for image analysis
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -124,19 +125,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_Introduction_BIA/01_exercise_installation.html">
-     1.1. Installation
+     Installation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_Introduction_BIA/02_exercise_apoc.html">
-     1.2. Exercise: Interactive pixel and object classification
+     Exercise: Interactive pixel and object classification
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_Introduction_Jupyter_lab/readme.html">
-   2. Introduction to Jupyter Lab
+   Introduction to Jupyter Lab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -145,25 +146,20 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_Introduction_Jupyter_lab/00_trailer.html">
-     2.1. Trailer: Bio-image Analysis with Python and Napari
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook.html">
-     2.2. Python code in Jupyter notebooks
+     Python code in Jupyter notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_Introduction_Jupyter_lab/04_Dont_try_this_at_home.html">
-     2.4. Pitfalls when working with Jupyter notebooks
+     Pitfalls when working with Jupyter notebooks
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/readme.html">
-   3. Using Jupyter Notebooks and Napari
+   Using Jupyter Notebooks and Napari
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -173,29 +169,24 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/01_Napari_from_Jupyter_introduction.html">
-     3.1. Using Napari to visualize and interact with images
+     Using Napari to visualize and interact with images
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/02_my_segmentation_workflow.html">
-     3.2. Segmentation Workflow Example with 3D Data
+     Segmentation Workflow Example with 3D Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/03_batch_segmentation_workflow.html">
-     3.3. Batch Segmentation Workflow Example
+     Batch Segmentation Workflow Example
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="readme.html">
-   4. Image Processing
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../07_Image_segmentation/readme.html">
-   5. Image segmentation
+  <a class="reference internal" href="../04_Image_Processing/readme.html">
+   Image Processing
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -204,35 +195,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/01_Introduction_to_image_segmentation.html">
-     5.1. Image segmentation
+    <a class="reference internal" href="../04_Image_Processing/2_Histogram.html">
+     Histogram
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/02_voronoi_otsu_labeling.html">
-     5.2. Voronoi-Otsu-labeling
+    <a class="reference internal" href="../04_Image_Processing/4_Manual_Binarization.html">
+     Binarization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/03_label_visualization.html">
-     5.3. Label image visualization
+    <a class="reference internal" href="../04_Image_Processing/5_Image_Filters.html">
+     Image Filters
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/04_segmentation_2d_membranes.html">
-     5.4. Seeded watershed for membrane-based cell segmentation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/06_open_close_labels.html">
-     5.5. Label image refinement
+    <a class="reference internal" href="../04_Image_Processing/6_Morphological_operations.html">
+     Morphological Image Processing
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_Feature_extraction/readme.html">
-   6. Feature extraction
+  <a class="reference internal" href="../07_Image_segmentation/readme.html">
+   Image segmentation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -241,20 +227,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
-     6.1. Quantitative image analysis using scikit-image
+    <a class="reference internal" href="../07_Image_segmentation/01_Introduction_to_image_segmentation.html">
+     Image segmentation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
-     6.4. Quantitative image analysis using SimpleITK
+    <a class="reference internal" href="../07_Image_segmentation/02_voronoi_otsu_labeling.html">
+     Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/03_label_visualization.html">
+     Label image visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/04_segmentation_2d_membranes.html">
+     Seeded watershed for membrane-based cell segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/06_open_close_labels.html">
+     Label image refinement
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_Pandas/readme.html">
-   7. Working with tabular data
+  <a class="reference internal" href="../08_Feature_extraction/readme.html">
+   Feature extraction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -263,36 +264,85 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
-     7.1. Introduction to working with DataFrames
+    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
+     Quantitative image analysis using scikit-image
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
-     7.2. Appending tables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
-     7.3. Handling NaN values
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
-     7.5. Parametric maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
-     7.6. Interacting with measurements in Napari
+    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
+     Quantitative image analysis using SimpleITK
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../09_Seaborn/readme.html">
-   8. Plotting Data with Seaborn
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08_Pandas/readme.html">
+   Working with tabular data
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
+     Introduction to working with DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
+     Appending tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
+     Handling NaN values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
+     Parametric maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
+     Interacting with measurements in Napari
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="readme.html">
+   Plotting Data with Seaborn
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_Plotting_Data_with_Python.html">
+     Plotting Data with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_Introduction_to_Seaborn.html">
+     Introduction to Seaborn
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_Plotting_distributions.html">
+     Plotting Distributions with Seaborn
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Multivariate views
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -353,7 +403,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/BiAPoL/HIP_Introduction_to_Napari_and_image_processing_with_Python_2022/master?urlpath=tree/04_Image_Processing/4_Binarization.ipynb"
+        <a href="https://mybinder.org/v2/gh/BiAPoL/HIP_Introduction_to_Napari_and_image_processing_with_Python_2022/master?urlpath=tree/09_Seaborn/04_Multivariate_views.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -409,7 +459,7 @@ title="Source repository"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/04_Image_Processing/4_Binarization.ipynb"
+        <a href="../_sources/09_Seaborn/04_Multivariate_views.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -468,21 +518,19 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Binarization
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-joint-and-marginal-distributions">
+   Plotting joint and marginal distributions
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#image-thesholding">
-     Image Thesholding
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1">
-   Exercise 1
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-many-distributions-at-once">
+   Plotting many distributions at once
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histograms-and-distribution-plots">
+   Histograms and Distribution Plots
   </a>
  </li>
 </ul>
@@ -494,7 +542,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Binarization</h1>
+                <h1>Multivariate views</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -504,21 +552,19 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Binarization
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-joint-and-marginal-distributions">
+   Plotting joint and marginal distributions
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#image-thesholding">
-     Image Thesholding
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise-1">
-   Exercise 1
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-many-distributions-at-once">
+   Plotting many distributions at once
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histograms-and-distribution-plots">
+   Histograms and Distribution Plots
   </a>
  </li>
 </ul>
@@ -531,151 +577,217 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="binarization">
-<h1>Binarization<a class="headerlink" href="#binarization" title="Permalink to this headline">#</a></h1>
-<p>Binarization is a data transformation that splits them into two groups. The value that splits them is called threshold value.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="multivariate-views">
+<h1>Multivariate views<a class="headerlink" href="#multivariate-views" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span>
-<span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">skimage.exposure</span> <span class="kn">import</span> <span class="n">histogram</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="image-thesholding">
-<h2>Image Thesholding<a class="headerlink" href="#image-thesholding" title="Permalink to this headline">#</a></h2>
-<p>Consider the image below. We can see at least two categories:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- cells;
+<p>Let’s load the same dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/BBBC007_analysis.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-- background;
-</pre></div>
-</div>
-<p>If we want to write a code to quantify some feature of the cells, we eventually have to binarize the image, i.e., split the image into these two groups.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_path</span> <span class="o">=</span> <span class="s1">&#39;../data/mitosis_mod.tif&#39;</span>
-<span class="n">image_cells</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_cells</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1dcd2193e80&gt;
-</pre></div>
-</div>
-<img alt="../_images/4_Binarization_6_1.png" src="../_images/4_Binarization_6_1.png" />
-</div>
-</div>
-<p>We can see the range of pixels by the colorbar or by the code below:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;max pixel value = &#39;</span><span class="p">,</span> <span class="n">image_cells</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;min pixel value = &#39;</span><span class="p">,</span> <span class="n">image_cells</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>max pixel value =  255
-min pixel value =  8
-</pre></div>
-</div>
-</div>
-</div>
-<p>Therefore, we can choose a value in between that can split the image into two groups. Let’s try with a value in the middle (125).</p>
-<p>Thus, we can binarize the image like this:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_binary</span> <span class="o">=</span> <span class="n">image_cells</span> <span class="o">&gt;</span> <span class="mi">125</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_binary</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1dcd2307790&gt;
-</pre></div>
-</div>
-<img alt="../_images/4_Binarization_11_1.png" src="../_images/4_Binarization_11_1.png" />
-</div>
-</div>
-<p>Ok maybe 125 was a bad choice… We could at least guess with more insight. The histogram is a useful tool for that.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># Create an empty figure with a specific screen size</span>
-<span class="n">piexl_counts</span><span class="p">,</span> <span class="n">pixel_values</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">image_cells</span><span class="p">)</span> <span class="c1"># Calculate the image histogram</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">pixel_values</span><span class="p">,</span> <span class="n">piexl_counts</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Plot the histogram</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 248 artists&gt;
-</pre></div>
-</div>
-<img alt="../_images/4_Binarization_13_1.png" src="../_images/4_Binarization_13_1.png" />
-</div>
-</div>
-<p>There is a small ‘valley’ around the value 60 that seems it would separate two groups. Let’s try it.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_binary</span> <span class="o">=</span> <span class="n">image_cells</span> <span class="o">&gt;</span> <span class="mi">60</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_binary</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1dcd2638250&gt;
-</pre></div>
-</div>
-<img alt="../_images/4_Binarization_16_1.png" src="../_images/4_Binarization_16_1.png" />
-</div>
-</div>
-<p>Much better!</p>
-<p>However, manually setting the threshold may only be interesting while exploring the data, not as part of an image analysis workflow.</p>
-<p>A few reasons why:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- We do not want to choose this every time by hand;
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-- We would like to avoid introducing bias;
-
-- We would like the workflow to be asily reproducible by others.
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>area</th>
+      <th>intensity_mean</th>
+      <th>major_axis_length</th>
+      <th>minor_axis_length</th>
+      <th>aspect_ratio</th>
+      <th>file_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>139</td>
+      <td>96.546763</td>
+      <td>17.504104</td>
+      <td>10.292770</td>
+      <td>1.700621</td>
+      <td>20P1_POS0010_D_1UL</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>360</td>
+      <td>86.613889</td>
+      <td>35.746808</td>
+      <td>14.983124</td>
+      <td>2.385805</td>
+      <td>20P1_POS0010_D_1UL</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>43</td>
+      <td>91.488372</td>
+      <td>12.967884</td>
+      <td>4.351573</td>
+      <td>2.980045</td>
+      <td>20P1_POS0010_D_1UL</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>140</td>
+      <td>73.742857</td>
+      <td>18.940508</td>
+      <td>10.314404</td>
+      <td>1.836316</td>
+      <td>20P1_POS0010_D_1UL</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>144</td>
+      <td>89.375000</td>
+      <td>13.639308</td>
+      <td>13.458532</td>
+      <td>1.013432</td>
+      <td>20P1_POS0010_D_1UL</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="plotting-joint-and-marginal-distributions">
+<h2>Plotting joint and marginal distributions<a class="headerlink" href="#plotting-joint-and-marginal-distributions" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Fortunately, there are several very robust methods that automatically calculate the threshold value based the image itself.</p>
-<p>One of them was developed by Nobuyuki Otsu in 1979! It is called… <a class="reference external" href="https://en.wikipedia.org/wiki/Otsu">Otsu’s method</a>. There is <a class="reference external" href="https://scikit-image.org/docs/stable/api/skimage.filters.html#skimage.filters.threshold_otsu">an implementation of it in scikit-image</a>.</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1d563098b20&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_5_1.png" src="../_images/04_Multivariate_views_5_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s1">&#39;file_name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1d569392400&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_6_1.png" src="../_images/04_Multivariate_views_6_1.png" />
+</div>
+</div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h1>
-<p>Apply Otsu thresholding to the cells image and plot it. What is the obtained threshold value?</p>
+<section id="plotting-many-distributions-at-once">
+<h2>Plotting many distributions at once<a class="headerlink" href="#plotting-many-distributions-at-once" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.filters</span> <span class="kn">import</span> <span class="n">threshold_otsu</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1d56952aa90&gt;
+</pre></div>
 </div>
+<img alt="../_images/04_Multivariate_views_8_1.png" src="../_images/04_Multivariate_views_8_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1d56b2964f0&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_9_1.png" src="../_images/04_Multivariate_views_9_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1d56c22bdc0&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_10_1.png" src="../_images/04_Multivariate_views_10_1.png" />
+</div>
+</div>
+</section>
+<section id="histograms-and-distribution-plots">
+<h2>Histograms and Distribution Plots<a class="headerlink" href="#histograms-and-distribution-plots" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;intensity_mean&#39;, ylabel=&#39;Count&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_12_1.png" src="../_images/04_Multivariate_views_12_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;intensity_mean&#39;, ylabel=&#39;Density&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_13_1.png" src="../_images/04_Multivariate_views_13_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1d56cbbddc0&gt;
+</pre></div>
+</div>
+<img alt="../_images/04_Multivariate_views_14_1.png" src="../_images/04_Multivariate_views_14_1.png" />
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -691,7 +803,7 @@ min pixel value =  8
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./04_Image_Processing"
+            path: "./09_Seaborn"
         },
         predefinedOutput: true
     }
@@ -705,6 +817,13 @@ min pixel value =  8
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="03_Plotting_distributions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Plotting Distributions with Seaborn</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>

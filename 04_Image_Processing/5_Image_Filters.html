@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Morphological Image Processing" href="6_Morphological_operations.html" />
+    <link rel="prev" title="Binarization" href="4_Manual_Binarization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,10 +113,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_Introduction_BIA/readme.html">
-   1. Introduction to Napari for image analysis
+   Introduction to Napari for image analysis
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -124,19 +126,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_Introduction_BIA/01_exercise_installation.html">
-     1.1. Installation
+     Installation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_Introduction_BIA/02_exercise_apoc.html">
-     1.2. Exercise: Interactive pixel and object classification
+     Exercise: Interactive pixel and object classification
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_Introduction_Jupyter_lab/readme.html">
-   2. Introduction to Jupyter Lab
+   Introduction to Jupyter Lab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -145,25 +147,20 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_Introduction_Jupyter_lab/00_trailer.html">
-     2.1. Trailer: Bio-image Analysis with Python and Napari
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook.html">
-     2.2. Python code in Jupyter notebooks
+     Python code in Jupyter notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_Introduction_Jupyter_lab/04_Dont_try_this_at_home.html">
-     2.4. Pitfalls when working with Jupyter notebooks
+     Pitfalls when working with Jupyter notebooks
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/readme.html">
-   3. Using Jupyter Notebooks and Napari
+   Using Jupyter Notebooks and Napari
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -173,66 +170,56 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/01_Napari_from_Jupyter_introduction.html">
-     3.1. Using Napari to visualize and interact with images
+     Using Napari to visualize and interact with images
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/02_my_segmentation_workflow.html">
-     3.2. Segmentation Workflow Example with 3D Data
+     Segmentation Workflow Example with 3D Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/03_batch_segmentation_workflow.html">
-     3.3. Batch Segmentation Workflow Example
+     Batch Segmentation Workflow Example
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="readme.html">
-   4. Image Processing
+   Image Processing
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../07_Image_segmentation/readme.html">
-   5. Image segmentation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/01_Introduction_to_image_segmentation.html">
-     5.1. Image segmentation
+    <a class="reference internal" href="2_Histogram.html">
+     Histogram
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/02_voronoi_otsu_labeling.html">
-     5.2. Voronoi-Otsu-labeling
+    <a class="reference internal" href="4_Manual_Binarization.html">
+     Binarization
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Image Filters
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/03_label_visualization.html">
-     5.3. Label image visualization
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/04_segmentation_2d_membranes.html">
-     5.4. Seeded watershed for membrane-based cell segmentation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../07_Image_segmentation/06_open_close_labels.html">
-     5.5. Label image refinement
+    <a class="reference internal" href="6_Morphological_operations.html">
+     Morphological Image Processing
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_Feature_extraction/readme.html">
-   6. Feature extraction
+  <a class="reference internal" href="../07_Image_segmentation/readme.html">
+   Image segmentation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -241,20 +228,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
-     6.1. Quantitative image analysis using scikit-image
+    <a class="reference internal" href="../07_Image_segmentation/01_Introduction_to_image_segmentation.html">
+     Image segmentation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
-     6.4. Quantitative image analysis using SimpleITK
+    <a class="reference internal" href="../07_Image_segmentation/02_voronoi_otsu_labeling.html">
+     Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/03_label_visualization.html">
+     Label image visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/04_segmentation_2d_membranes.html">
+     Seeded watershed for membrane-based cell segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../07_Image_segmentation/06_open_close_labels.html">
+     Label image refinement
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_Pandas/readme.html">
-   7. Working with tabular data
+  <a class="reference internal" href="../08_Feature_extraction/readme.html">
+   Feature extraction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -263,36 +265,85 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
-     7.1. Introduction to working with DataFrames
+    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
+     Quantitative image analysis using scikit-image
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
-     7.2. Appending tables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
-     7.3. Handling NaN values
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
-     7.5. Parametric maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
-     7.6. Interacting with measurements in Napari
+    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
+     Quantitative image analysis using SimpleITK
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../09_Seaborn/readme.html">
-   8. Plotting Data with Seaborn
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08_Pandas/readme.html">
+   Working with tabular data
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
+     Introduction to working with DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
+     Appending tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
+     Handling NaN values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
+     Parametric maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
+     Interacting with measurements in Napari
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../09_Seaborn/readme.html">
+   Plotting Data with Seaborn
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/01_Plotting_Data_with_Python.html">
+     Plotting Data with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/02_Introduction_to_Seaborn.html">
+     Introduction to Seaborn
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/03_Plotting_distributions.html">
+     Plotting Distributions with Seaborn
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/04_Multivariate_views.html">
+     Multivariate views
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -468,51 +519,44 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Image Filters
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-an-image-with-a-custom-kernel">
+   Filtering an image with a custom kernel
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filtering-an-image-with-a-custom-kernel">
-     Filtering an image with a custom kernel
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uniform-kernel">
+     Uniform Kernel
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#uniform-kernel">
-       1. Uniform Kernel
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mean-filter">
-       2. Mean Filter
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#prewitt-filter-a-simple-edge-detection">
-       3. Prewitt Filter (a simple edge detection)
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-filter">
+     Mean Filter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prewitt-filter-a-simple-edge-detection">
+     Prewitt Filter (a simple edge detection)
+    </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-1">
    Exercise 1
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-2">
    Exercise 2
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-3">
    Exercise 3
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-4-optional">
    Exercise 4 (optional)
   </a>
@@ -536,51 +580,44 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Image Filters
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-an-image-with-a-custom-kernel">
+   Filtering an image with a custom kernel
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#filtering-an-image-with-a-custom-kernel">
-     Filtering an image with a custom kernel
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uniform-kernel">
+     Uniform Kernel
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#uniform-kernel">
-       1. Uniform Kernel
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mean-filter">
-       2. Mean Filter
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#prewitt-filter-a-simple-edge-detection">
-       3. Prewitt Filter (a simple edge detection)
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-filter">
+     Mean Filter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prewitt-filter-a-simple-edge-detection">
+     Prewitt Filter (a simple edge detection)
+    </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-1">
    Exercise 1
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-2">
    Exercise 2
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-3">
    Exercise 3
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercise-4-optional">
    Exercise 4 (optional)
   </a>
@@ -643,7 +680,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2804ced33d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc156426d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_6_1.png" src="../_images/5_Image_Filters_6_1.png" />
@@ -653,7 +690,7 @@ title="Print to PDF"
 <h2>Filtering an image with a custom kernel<a class="headerlink" href="#filtering-an-image-with-a-custom-kernel" title="Permalink to this headline">#</a></h2>
 <p>More specifically, image filters are the result of small arrays (a.k.a. kernels/footprints) that slide through the image and perform some mathematical operation over the pixels they overlay, assigning a new value to each pixel. This operation is called <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-correlation">cross-correlation</a>, which is very similar to a <a class="reference external" href="https://en.wikipedia.org/wiki/Convolution">convolution</a>, sometimes also used. One of the simplest filters we could design is one with a uniform kernel, which is an array composed of the same value.</p>
 <section id="uniform-kernel">
-<h3>1. Uniform Kernel<a class="headerlink" href="#uniform-kernel" title="Permalink to this headline">#</a></h3>
+<h3>Uniform Kernel<a class="headerlink" href="#uniform-kernel" title="Permalink to this headline">#</a></h3>
 <p>We will apply this uniform kernel over the image.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -712,7 +749,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2804d0266a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc1579b340&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_15_1.png" src="../_images/5_Image_Filters_15_1.png" />
@@ -727,7 +764,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 <p>The first one would be the expected behaviour of a uniform kernel. We are summing each pixel value with its surroundings. We could mitigate the second by normalizing the kernel.</p>
 </section>
 <section id="mean-filter">
-<h3>2. Mean Filter<a class="headerlink" href="#mean-filter" title="Permalink to this headline">#</a></h3>
+<h3>Mean Filter<a class="headerlink" href="#mean-filter" title="Permalink to this headline">#</a></h3>
 <p>If we normalize the kernel by dividing it by the number of elements, we essentially get the mean:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -779,7 +816,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
  [0.         0.66666667 0.66666667 0.88888889 0.44444444]]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2804d0f09d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc15858d60&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_23_2.png" src="../_images/5_Image_Filters_23_2.png" />
@@ -789,7 +826,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 <p>There are more efficient options for that, like the <a class="reference external" href="https://en.wikipedia.org/wiki/Median_filter">median</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Gaussian_filter">gaussian</a> filters.</p>
 </section>
 <section id="prewitt-filter-a-simple-edge-detection">
-<h3>3. Prewitt Filter (a simple edge detection)<a class="headerlink" href="#prewitt-filter-a-simple-edge-detection" title="Permalink to this headline">#</a></h3>
+<h3>Prewitt Filter (a simple edge detection)<a class="headerlink" href="#prewitt-filter-a-simple-edge-detection" title="Permalink to this headline">#</a></h3>
 <p>What if we use the following kernel instead?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -819,7 +856,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
  [ 0.         -2.          0.          1.33333333 -0.66666667]]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2804d1a7ca0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc15914d00&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_28_2.png" src="../_images/5_Image_Filters_28_2.png" />
@@ -837,7 +874,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2804edfff10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc170d7310&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_30_1.png" src="../_images/5_Image_Filters_30_1.png" />
@@ -858,7 +895,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x2804f2f1610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc175c2370&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_32_1.png" src="../_images/5_Image_Filters_32_1.png" />
@@ -866,13 +903,12 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h1>
+<section id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h2>
 <p>Apply the horizontal Prewitt filter to the same image and display the resulting image.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-2">
-<h1>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h1>
+<section id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">#</a></h2>
 <p>Apply the <a class="reference external" href="https://en.wikipedia.org/wiki/Prewitt_operator">Prewitt</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Gaussian_filter">Gaussian</a> and Median filters from scikit-image to the cells image and display the outputs.</p>
 <p>What are each of these filters good at?</p>
 <p><em>Hint: you don’t need to manually define a kernel anymore for these.</em></p>
@@ -885,7 +921,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_path</span> <span class="o">=</span> <span class="s1">&#39;../data/mitosis_mod.tif&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_path</span> <span class="o">=</span> <span class="s1">&#39;../../data/mitosis_mod.tif&#39;</span>
 <span class="n">image_cells</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -899,15 +935,15 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x28051674730&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.colorbar.Colorbar at 0x1fc199432e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/5_Image_Filters_41_1.png" src="../_images/5_Image_Filters_41_1.png" />
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-3">
-<h1>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h1>
+<section id="exercise-3">
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">#</a></h2>
 <p>Binarize the results from exercise 2, including the original image, with Otsu threshold and display them.</p>
 <p>In your opinion, which of these results is less noisy?</p>
 <div class="cell docutils container">
@@ -918,8 +954,8 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercise-4-optional">
-<h1>Exercise 4 (optional)<a class="headerlink" href="#exercise-4-optional" title="Permalink to this headline">#</a></h1>
+<section id="exercise-4-optional">
+<h2>Exercise 4 (optional)<a class="headerlink" href="#exercise-4-optional" title="Permalink to this headline">#</a></h2>
 <p>Now that you know how filters work on images, you can design your filter! Play with it by designing your own (small) kernel and see the results! :D</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -928,6 +964,7 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -957,6 +994,20 @@ In this case, each of the surrounding pixels and <strong>pixel4</strong> itself 
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="4_Manual_Binarization.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Binarization</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="6_Morphological_operations.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Morphological Image Processing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

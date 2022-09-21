@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Image segmentation &#8212; Image Analyis with Napari and Python (HIP 2022)</title>
+    <title>Image segmentation &#8212; Image Analyis with Napari and Python (HIP 2022)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.1. Image segmentation" href="01_Introduction_to_image_segmentation.html" />
-    <link rel="prev" title="4. Image Processing" href="../04_Image_Processing/readme.html" />
+    <link rel="next" title="Image segmentation" href="01_Introduction_to_image_segmentation.html" />
+    <link rel="prev" title="Morphological Image Processing" href="../04_Image_Processing/6_Morphological_operations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_Introduction_BIA/readme.html">
-   1. Introduction to Napari for image analysis
+   Introduction to Napari for image analysis
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -126,19 +126,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_Introduction_BIA/01_exercise_installation.html">
-     1.1. Installation
+     Installation
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../01_Introduction_BIA/02_exercise_apoc.html">
-     1.2. Exercise: Interactive pixel and object classification
+     Exercise: Interactive pixel and object classification
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_Introduction_Jupyter_lab/readme.html">
-   2. Introduction to Jupyter Lab
+   Introduction to Jupyter Lab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -147,25 +147,20 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02_Introduction_Jupyter_lab/00_trailer.html">
-     2.1. Trailer: Bio-image Analysis with Python and Napari
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook.html">
-     2.2. Python code in Jupyter notebooks
+     Python code in Jupyter notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02_Introduction_Jupyter_lab/04_Dont_try_this_at_home.html">
-     2.4. Pitfalls when working with Jupyter notebooks
+     Pitfalls when working with Jupyter notebooks
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/readme.html">
-   3. Using Jupyter Notebooks and Napari
+   Using Jupyter Notebooks and Napari
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -175,88 +170,93 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/01_Napari_from_Jupyter_introduction.html">
-     3.1. Using Napari to visualize and interact with images
+     Using Napari to visualize and interact with images
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/02_my_segmentation_workflow.html">
-     3.2. Segmentation Workflow Example with 3D Data
+     Segmentation Workflow Example with 3D Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../03_Introduction_Jupyter_with_napari/03_batch_segmentation_workflow.html">
-     3.3. Batch Segmentation Workflow Example
+     Batch Segmentation Workflow Example
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_Image_Processing/readme.html">
-   4. Image Processing
+   Image Processing
   </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   5. Image segmentation
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_Introduction_to_image_segmentation.html">
-     5.1. Image segmentation
+    <a class="reference internal" href="../04_Image_Processing/2_Histogram.html">
+     Histogram
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="02_voronoi_otsu_labeling.html">
-     5.2. Voronoi-Otsu-labeling
+    <a class="reference internal" href="../04_Image_Processing/4_Manual_Binarization.html">
+     Binarization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="03_label_visualization.html">
-     5.3. Label image visualization
+    <a class="reference internal" href="../04_Image_Processing/5_Image_Filters.html">
+     Image Filters
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04_segmentation_2d_membranes.html">
-     5.4. Seeded watershed for membrane-based cell segmentation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="06_open_close_labels.html">
-     5.5. Label image refinement
+    <a class="reference internal" href="../04_Image_Processing/6_Morphological_operations.html">
+     Morphological Image Processing
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_Feature_extraction/readme.html">
-   6. Feature extraction
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Image segmentation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
-     6.1. Quantitative image analysis using scikit-image
+    <a class="reference internal" href="01_Introduction_to_image_segmentation.html">
+     Image segmentation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
-     6.4. Quantitative image analysis using SimpleITK
+    <a class="reference internal" href="02_voronoi_otsu_labeling.html">
+     Voronoi-Otsu-labeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_label_visualization.html">
+     Label image visualization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_segmentation_2d_membranes.html">
+     Seeded watershed for membrane-based cell segmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06_open_close_labels.html">
+     Label image refinement
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../08_Pandas/readme.html">
-   7. Working with tabular data
+  <a class="reference internal" href="../08_Feature_extraction/readme.html">
+   Feature extraction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -265,36 +265,85 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
-     7.1. Introduction to working with DataFrames
+    <a class="reference internal" href="../08_Feature_extraction/01_quantitative_measurements.html">
+     Quantitative image analysis using scikit-image
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
-     7.2. Appending tables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
-     7.3. Handling NaN values
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
-     7.5. Parametric maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
-     7.6. Interacting with measurements in Napari
+    <a class="reference internal" href="../08_Feature_extraction/02_statistics_with_simpleitk.html">
+     Quantitative image analysis using SimpleITK
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../09_Seaborn/readme.html">
-   8. Plotting Data with Seaborn
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../08_Pandas/readme.html">
+   Working with tabular data
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/01_introduction_dataframes.html">
+     Introduction to working with DataFrames
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/02_append_tables.html">
+     Appending tables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/03_handling_NaNs.html">
+     Handling NaN values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/04_parametric_maps.html">
+     Parametric maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../08_Pandas/05_measurement_visualization_in_napari.html">
+     Interacting with measurements in Napari
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../09_Seaborn/readme.html">
+   Plotting Data with Seaborn
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/01_Plotting_Data_with_Python.html">
+     Plotting Data with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/02_Introduction_to_Seaborn.html">
+     Introduction to Seaborn
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/03_Plotting_distributions.html">
+     Plotting Distributions with Seaborn
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../09_Seaborn/04_Multivariate_views.html">
+     Multivariate views
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -444,9 +493,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="image-segmentation">
-<h1><span class="section-number">5. </span>Image segmentation<a class="headerlink" href="#image-segmentation" title="Permalink to this headline">#</a></h1>
-<p>In this chapter we will dive into image segmentation. We will binarize images, label objects in images, and we will post-process binary images and label images. The goal is to learn how to differentiate cells and nuclei from the image background as well as how to modify those segmentations to better represent of what we think the segmentation should look like.</p>
-<p>The slides are available online [image_segmentation.pdf].</p>
+<h1>Image segmentation<a class="headerlink" href="#image-segmentation" title="Permalink to this headline">#</a></h1>
+<p>In this chapter we will dive into image segmentation. We will binarize images, label objects in images, and we will post-process binary images and label images. The goal is to learn how to differentiate cells and nuclei from the image background as well as how to modify those segmentations to better represent of what we think the segmentation should look like.
+The slides are available <a class="reference external" href="https://github.com/BiAPoL/HIP_Introduction_to_Napari_and_image_processing_with_Python_2022/blob/main/docs/07_Image_segmentation/image_segmentation.pdf">online</a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -478,17 +527,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../04_Image_Processing/readme.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../04_Image_Processing/6_Morphological_operations.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>Image Processing</p>
+            <p class="prev-next-title">Morphological Image Processing</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="01_Introduction_to_image_segmentation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.1. </span>Image segmentation</p>
+        <p class="prev-next-title">Image segmentation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
