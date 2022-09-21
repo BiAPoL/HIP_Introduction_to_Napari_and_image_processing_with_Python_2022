@@ -13,7 +13,6 @@ chapters:
 
 - file: 02_Introduction_Jupyter_lab/readme
   sections:
-  - file: 02_Introduction_Jupyter_lab/00_trailer # shall we move this to the next chapter? # We should merge with #2 of next section
   - file: 02_Introduction_Jupyter_lab/01_our_first_juptyer_notebook
   - file: 02_Introduction_Jupyter_lab/04_Dont_try_this_at_home
 
