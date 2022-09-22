@@ -711,7 +711,7 @@ title="Print to PDF"
 <img alt="../_images/03_Plotting_distributions_7_1.png" src="../_images/03_Plotting_distributions_7_1.png" />
 </div>
 </div>
-<p>The figure, and more general, version of this kind of plot is <code class="docutils literal notranslate"><span class="pre">catplot</span></code>. We just have to provide <code class="docutils literal notranslate"><span class="pre">kind</span></code> as <code class="docutils literal notranslate"><span class="pre">box</span></code>.</p>
+<p>The figure-level, and more general, version of this kind of plot is <code class="docutils literal notranslate"><span class="pre">catplot</span></code>. We just have to provide <code class="docutils literal notranslate"><span class="pre">kind</span></code> as <code class="docutils literal notranslate"><span class="pre">box</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;box&quot;</span><span class="p">)</span>
@@ -742,7 +742,7 @@ title="Print to PDF"
 </section>
 <section id="histograms-and-distribution-plots">
 <h2>Histograms and Distribution Plots<a class="headerlink" href="#histograms-and-distribution-plots" title="Permalink to this headline">#</a></h2>
-<p>The axes function for plotting histograms is <code class="docutils literal notranslate"><span class="pre">histplot</span></code>.</p>
+<p>The axes-level function for plotting histograms is <code class="docutils literal notranslate"><span class="pre">histplot</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
@@ -770,7 +770,7 @@ title="Print to PDF"
 <img alt="../_images/03_Plotting_distributions_16_1.png" src="../_images/03_Plotting_distributions_16_1.png" />
 </div>
 </div>
-<p>The figure and more general function for distributions is <code class="docutils literal notranslate"><span class="pre">distplot</span></code>. With it, you can have histograms and kde in the same plot, or other kinds of plots, like the empirical cumulative distribution function (ecdf).</p>
+<p>The figure-level function for distributions is <code class="docutils literal notranslate"><span class="pre">distplot</span></code>. With it, you can have histograms and kde in the same plot, or other kinds of plots, like the empirical cumulative distribution function (ecdf).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -787,7 +787,7 @@ title="Print to PDF"
 </section>
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
-<p>Plot the empirical cumulative distribution function on a same graph with different colors for the properties ‘intensity_mean’ and ‘area’.</p>
+<p>Plot two empirical cumulative distribution functions on a same graph with different colors for the properties ‘intensity_mean’ and ‘area’.</p>
 <p>*Hint: look for the <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameter of <code class="docutils literal notranslate"><span class="pre">displot</span></code></p>
 </section>
 </section>

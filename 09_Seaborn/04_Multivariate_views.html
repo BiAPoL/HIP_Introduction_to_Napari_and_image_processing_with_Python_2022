@@ -547,8 +547,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histograms-and-distribution-plots">
-   Histograms and Distribution Plots
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
   </a>
  </li>
 </ul>
@@ -581,8 +581,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#histograms-and-distribution-plots">
-   Histograms and Distribution Plots
+  <a class="reference internal nav-link" href="#exercise">
+   Exercise
   </a>
  </li>
 </ul>
@@ -597,6 +597,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="multivariate-views">
 <h1>Multivariate views<a class="headerlink" href="#multivariate-views" title="Permalink to this headline">#</a></h1>
+<p>In this notebook, we show a few examples of how to have plots with graphs of different types in a figure, like having a scatter plot with marginal distributions or even a multivariate plot with pair relationships of all properties in a table.</p>
+<p>Because these plots involve managing subplots, they are all figure-level functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -695,6 +697,7 @@ title="Print to PDF"
 </div>
 <section id="plotting-joint-and-marginal-distributions">
 <h2>Plotting joint and marginal distributions<a class="headerlink" href="#plotting-joint-and-marginal-distributions" title="Permalink to this headline">#</a></h2>
+<p>To have a joint distribution of two variableswith the marginal distributions on the sides, we can use <code class="docutils literal notranslate"><span class="pre">jointplot</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">)</span>
@@ -702,12 +705,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1d563098b20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x12edcf913d0&gt;
 </pre></div>
 </div>
-<img alt="../_images/04_Multivariate_views_5_1.png" src="../_images/04_Multivariate_views_5_1.png" />
+<img alt="../_images/04_Multivariate_views_7_1.png" src="../_images/04_Multivariate_views_7_1.png" />
 </div>
 </div>
+<p>As expected, it is possible to separate groups by passing a categorical property to the <code class="docutils literal notranslate"><span class="pre">hue</span></code> argument. This has an effect on the marginal distribution, turning them from histogram to kde plots.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;aspect_ratio&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s1">&#39;file_name&#39;</span><span class="p">)</span>
@@ -715,15 +719,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1d569392400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x12edd860970&gt;
 </pre></div>
 </div>
-<img alt="../_images/04_Multivariate_views_6_1.png" src="../_images/04_Multivariate_views_6_1.png" />
+<img alt="../_images/04_Multivariate_views_9_1.png" src="../_images/04_Multivariate_views_9_1.png" />
 </div>
 </div>
 </section>
 <section id="plotting-many-distributions-at-once">
 <h2>Plotting many distributions at once<a class="headerlink" href="#plotting-many-distributions-at-once" title="Permalink to this headline">#</a></h2>
+<p>The above examples displayed a plot with relationship between two properties. This can be further expanded with the <code class="docutils literal notranslate"><span class="pre">pairplot</span></code> function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
@@ -731,10 +736,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1d56952aa90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x12edda10820&gt;
 </pre></div>
 </div>
-<img alt="../_images/04_Multivariate_views_8_1.png" src="../_images/04_Multivariate_views_8_1.png" />
+<img alt="../_images/04_Multivariate_views_12_1.png" src="../_images/04_Multivariate_views_12_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -744,67 +749,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x1d56b2964f0&gt;
-</pre></div>
-</div>
-<img alt="../_images/04_Multivariate_views_9_1.png" src="../_images/04_Multivariate_views_9_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1d56c22bdc0&gt;
-</pre></div>
-</div>
-<img alt="../_images/04_Multivariate_views_10_1.png" src="../_images/04_Multivariate_views_10_1.png" />
-</div>
-</div>
-</section>
-<section id="histograms-and-distribution-plots">
-<h2>Histograms and Distribution Plots<a class="headerlink" href="#histograms-and-distribution-plots" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;intensity_mean&#39;, ylabel=&#39;Count&#39;&gt;
-</pre></div>
-</div>
-<img alt="../_images/04_Multivariate_views_12_1.png" src="../_images/04_Multivariate_views_12_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;intensity_mean&#39;, ylabel=&#39;Density&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x12edf75c6d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/04_Multivariate_views_13_1.png" src="../_images/04_Multivariate_views_13_1.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;intensity_mean&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;file_name&quot;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1d56cbbddc0&gt;
-</pre></div>
-</div>
-<img alt="../_images/04_Multivariate_views_14_1.png" src="../_images/04_Multivariate_views_14_1.png" />
-</div>
-</div>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">#</a></h2>
+<p>You may have noticed that the <code class="docutils literal notranslate"><span class="pre">pairplot</span></code> is redundant in some plots because the upper diagonal displays the same relationships rotated.</p>
+<p>Redraw the <code class="docutils literal notranslate"><span class="pre">pairplot</span></code> to display only the lower diagonal of the plots.</p>
+<p><em>Hint: explore the properties of the <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.pairplot.html#seaborn.pairplot">pairplot</a></em></p>
 </section>
 </section>
 

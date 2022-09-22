@@ -765,8 +765,8 @@ title="Print to PDF"
 </section>
 <section id="scatter-plots-with-subplots">
 <h2>Scatter plots with subplots<a class="headerlink" href="#scatter-plots-with-subplots" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">scatterplot</span></code> function is an axes function. This means, if we want to add subplots, we also need to create figure and axes from matplotlib first and pass the axes handles. That’s when knowing some matplotlib syntax may be handy!</p>
-<p>However, seaborn also have figure level functions, where the subplots are also just an argument.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">scatterplot</span></code> function is an axes-level function. This means, if we want to add subplots, we also need to create figure and axes from matplotlib first and pass the axes handles. That’s when knowing some matplotlib syntax may be handy!</p>
+<p>However, seaborn also have figure-level functions, where the subplots are also just an argument.</p>
 <p>In the example below, we use the <code class="docutils literal notranslate"><span class="pre">relplot</span></code> function (from <em>relationship</em>) and separate the files by providing ‘file_name’ to the argument <code class="docutils literal notranslate"><span class="pre">col</span></code>,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -790,7 +790,7 @@ title="Print to PDF"
 </section>
 <section id="adding-a-line-regression-model">
 <h2>Adding a line regression model<a class="headerlink" href="#adding-a-line-regression-model" title="Permalink to this headline">#</a></h2>
-<p>There are two functions to make a scatter plot with a line regression model: <code class="docutils literal notranslate"><span class="pre">regplot</span></code> and <code class="docutils literal notranslate"><span class="pre">lmplot</span></code>. As before, <code class="docutils literal notranslate"><span class="pre">regplot</span></code> is an axes funtion while <code class="docutils literal notranslate"><span class="pre">lmplot</span></code> is a figure function.</p>
+<p>There are two functions to make a scatter plot with a line regression model: <code class="docutils literal notranslate"><span class="pre">regplot</span></code> and <code class="docutils literal notranslate"><span class="pre">lmplot</span></code>. As before, <code class="docutils literal notranslate"><span class="pre">regplot</span></code> is an axes-level funtion while <code class="docutils literal notranslate"><span class="pre">lmplot</span></code> is a figure-level function.</p>
 <p>Let’s plot an example of each of them</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
