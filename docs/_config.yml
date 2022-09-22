@@ -1,7 +1,7 @@
 # In _config.yml
-title: Image Analyis with Napari and Python (HIP 2022)
+title: Image Analyis with Napari and Python (Helmholtz Imaging Summer Academy 2022)
 
-author: Robert Haase and Marcelo Zoccoler
+author: Marcelo Zoccoler and Robert Haase
 logo: biapol_logo.png
 execute:
   execute_notebooks: off

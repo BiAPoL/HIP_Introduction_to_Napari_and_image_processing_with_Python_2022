@@ -1,4 +1,6 @@
-# Image analysis with Python and Napari
+# Image analysis with Python and Napari - A Helmholtz Imaging Summer Academy 2022
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7102242.svg)](https://doi.org/10.5281/zenodo.7102242)
+
 In this Jupyter book we will introduce you to the basics of image processing [Python](https://python.org/) and [Napari](https://napari.org/). The one-day course is focused on processing microscopy images showing cells and nuclei. We will dive through segmenting objects, measuring their properties, managing measurements in tables and plotting results.
 
 See also

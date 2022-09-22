@@ -57,7 +57,9 @@ chapters:
   - file: 09_Seaborn/03_Plotting_distributions.ipynb
   - file: 09_Seaborn/04_Multivariate_views.ipynb
 
-
+- file: 10_complex_exercise/readme
+  sections: 
+  - file: 10_complex_exercise/01_complex_exercise
 
 
 
