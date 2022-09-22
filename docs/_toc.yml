@@ -23,7 +23,7 @@ chapters:
   - file: 03_Introduction_Jupyter_with_napari/03_batch_segmentation_workflow
 
 - file: 04_Image_Processing/readme
- sections:
+  sections:
   - file: 04_Image_Processing/2_Histogram
   - file: 04_Image_Processing/4_Manual_Binarization
   - file: 04_Image_Processing/5_Image_Filters
